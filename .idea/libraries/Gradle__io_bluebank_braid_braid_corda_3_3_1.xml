@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.bluebank.braid:braid-corda:3.3.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.bluebank.braid/braid-corda/3.3.1/ba89b2d45e64ca39e86f2f3b136321ec55533c8a/braid-corda-3.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.bluebank.braid/braid-corda/3.3.1/6716943798820996eb117d82da1de3660f40a6f/braid-corda-3.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

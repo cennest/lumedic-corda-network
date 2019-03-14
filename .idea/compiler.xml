@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="com.template.base.main" target="1.8" />
+      <module name="com.template.base.test" target="1.8" />
+      <module name="com.template.lumedic-corda-network.integrationTest" target="1.8" />
+      <module name="com.template.lumedic-corda-network.main" target="1.8" />
+      <module name="com.template.lumedic-corda-network.test" target="1.8" />
+      <module name="com.template.oracle.main" target="1.8" />
+      <module name="com.template.oracle.test" target="1.8" />
+      <module name="com.template.payer.integrationTest" target="1.8" />
+      <module name="com.template.payer.main" target="1.8" />
+      <module name="com.template.payer.test" target="1.8" />
+      <module name="com.template.provider.integrationTest" target="1.8" />
+      <module name="com.template.provider.main" target="1.8" />
+      <module name="com.template.provider.test" target="1.8" />
+      <module name="net.corda.server.spring-webserver.main" target="1.8" />
+      <module name="net.corda.server.spring-webserver.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -27,26 +27,26 @@ lib/dokka.jar
 # if you remove the above rule, at least ignore the following:
 
 # Specific files to avoid churn
-.idea/*.xml
-.idea/copyright
-.idea/jsLibraryMappings.xml
+#.idea/*.xml
+#.idea/copyright
+#.idea/jsLibraryMappings.xml
 
 # User-specific stuff:
-.idea/tasks.xml
-.idea/dictionaries
+#.idea/tasks.xml
+#.idea/dictionaries
 
 # Sensitive or high-churn files:
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
+#.idea/dataSources.ids
+#.idea/dataSources.xml
+#.idea/sqlDataSources.xml
+#.idea/dynamic.xml
+#.idea/uiDesigner.xml
 
 # Gradle:
-.idea/libraries
+#.idea/libraries
 
 # Mongo Explorer plugin:
-.idea/mongoSettings.xml
+#.idea/mongoSettings.xml
 
 ## File-based project format:
 *.ipr
@@ -60,7 +60,7 @@ cordapp/out/
 cordapp-contracts-states/out/
 
 # mpeltonen/sbt-idea plugin
-.idea_modules/
+#.idea_modules/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
