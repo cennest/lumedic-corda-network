@@ -40,7 +40,7 @@ class RecieveFlow(private val harID:String, private val epicRecord: EpicRecord):
         object VERIFYING_TRANSACTION : ProgressTracker.Step("Verifying model constraints.")
         object SIGNING_TRANSACTION : ProgressTracker.Step("Signing transaction with our private key.")
         object GATHERING_SIGS : ProgressTracker.Step("Gathering the counterparty's signature.") {
-            override fun childProgressTracker() = CollectSignaturesFlow.tracker()
+            //override fun childProgressTracker() = CollectSignaturesFlow.tracker()
         }
 
         object FINALISING_TRANSACTION : ProgressTracker.Step("Obtaining notary signature and recording transaction.") {
