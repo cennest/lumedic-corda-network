@@ -1,0 +1,3 @@
+# Register here any serialization whitelists for 3rd party classes extending from net.corda.core.serialization.SerializationWhitelist
+
+com.lumedic.network.SerializationWhiteList
