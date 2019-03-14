@@ -47,13 +47,13 @@ class RecieveFlow(private val harID:String, private val epicRecord: EpicRecord):
             override fun childProgressTracker() = FinalityFlow.tracker()
         }
 
-//        fun tracker() = ProgressTracker(
-//                GENERATING_TRANSACTION,
-//                VERIFYING_TRANSACTION,
-//                SIGNING_TRANSACTION,
-//                GATHERING_SIGS,
-//                FINALISING_TRANSACTION
-//        )
+        fun tracker() = ProgressTracker(
+                GENERATING_TRANSACTION,
+                VERIFYING_TRANSACTION,
+                SIGNING_TRANSACTION,
+                GATHERING_SIGS,
+                FINALISING_TRANSACTION
+        )
 
     }
     override val progressTracker = tracker()
