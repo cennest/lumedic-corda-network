@@ -69,7 +69,7 @@ class FlowTests {
         val payerCTP = future.get();
         assert (payerCTP.isAuthRequired == true)
         assert (payerCTP.ctpCode == "0002U")
-        assert (payerCTP.payer == "PNP")
+        assert (payerCTP.payer == "PHP")
     }
 
     @Test
