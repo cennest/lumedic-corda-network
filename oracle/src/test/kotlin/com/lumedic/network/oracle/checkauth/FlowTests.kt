@@ -121,44 +121,44 @@ class FlowTests {
         return ldt.toDate()
     }
 
-//    @Test
-//    fun testSignHandler() {
-//        val harID = "10000"
-//        val epicRecord = EpicRecord("PHP", "Oncology (colorectal)", "0002U", scheduledDate = randomDate())
-//        val uniqueIdentifier = UniqueIdentifier(harID)
-//        val inputState = HARState(HARStatus.OPEN.toString(), listOf(nodeProvider.legalIdentity()),
-//                epicRecord.desc, harID, epicRecord.cptCode, epicRecord.payer, "", uniqueIdentifier,
-//                epicRecord.scheduledDate!!, isAuthRequired = true)
-//
-//        val outputState = HARState(HARStatus.PENDING.toString(), listOf(nodeProvider.legalIdentity(), nodeOracle.legalIdentity()),
-//                inputState.description, harID, inputState.cptCode, inputState.payer, "authCode", uniqueIdentifier,
-//                inputState.eventTime, Date.from(Instant.now()), true)
-//
-//        val txBuilder = TransactionBuilder(notary = nodeNotary.legalIdentity())
-//        val outputContractAndState = StateAndContract(outputState, HARSTATE_CONTRACT_ID)
-//        val cmd = Command(HARStateContract.CheckAuth(outputState.cptCode, outputState.payer, outputState.isAuthRequired),
-//                listOf(nodeOracle.legalIdentity().owningKey, nodeProvider.legalIdentity().owningKey))
-//
-//        val inputStateRef: StateAndRef<HARState> = StateAndRef(TransactionState(inputState, HARSTATE_CONTRACT_ID, notary = nodeNotary.legalIdentity()),
-//                StateRef(SecureHash.zeroHash, 0));
-//        txBuilder.addInputState(inputStateRef)
-//        // We add the items to the builder.
-//        txBuilder.withItems(outputContractAndState, cmd)
-//        val ptx = nodeProvider.services.signInitialTransaction(txBuilder)
-//
-//        val ftx = ptx.buildFilteredTransaction(Predicate {
-//            when (it) {
-//                is Command<*> -> nodeOracle.legalIdentity().owningKey in it.signers && it.value is HARStateContract.CheckAuth
-//                else -> false
-//            }
-//        })
-//        val flow = SignFilteredTransaction(nodeOracle.legalIdentity(), ftx)
-//        val future = nodePayer.startFlow(flow)
-//        mockNet.runNetwork()
-//        val oracleSignature = future.get();
-//
-//        val oracleKey = nodeOracle.legalIdentity().owningKey
-//        val oracleSign = nodeOracle.services.createSignature(ptx, oracleKey)
-//        assert (oracleSignature == oracleSign)
-//    }
+    @Test
+    fun testSignHandler() {
+        val harID = "10000"
+        val epicRecord = EpicRecord("PHP", "Oncology (colorectal)", "0002U", scheduledDate = randomDate())
+        val uniqueIdentifier = UniqueIdentifier(harID)
+        val inputState = HARState(HARStatus.OPEN.toString(), listOf(nodeProvider.legalIdentity()),
+                epicRecord.desc, harID, epicRecord.cptCode,"", epicRecord.payer,"", "", uniqueIdentifier,
+                epicRecord.scheduledDate!!, isAuthRequired = true)
+
+        val outputState = HARState(HARStatus.PENDING.toString(), listOf(nodeProvider.legalIdentity(), nodeOracle.legalIdentity()),
+                inputState.description, harID, inputState.cptCode,"", inputState.payer,"", "authCode", uniqueIdentifier,
+                inputState.eventTime, Date.from(Instant.now()), true)
+
+        val txBuilder = TransactionBuilder(notary = nodeNotary.legalIdentity())
+        val outputContractAndState = StateAndContract(outputState, HARSTATE_CONTRACT_ID)
+        val cmd = Command(HARStateContract.CheckAuth(outputState.cptCode, outputState.payer, outputState.isAuthRequired),
+                listOf(nodeOracle.legalIdentity().owningKey, nodeProvider.legalIdentity().owningKey))
+
+        val inputStateRef: StateAndRef<HARState> = StateAndRef(TransactionState(inputState, HARSTATE_CONTRACT_ID, notary = nodeNotary.legalIdentity()),
+                StateRef(SecureHash.zeroHash, 0));
+        txBuilder.addInputState(inputStateRef)
+        // We add the items to the builder.
+        txBuilder.withItems(outputContractAndState, cmd)
+        val ptx = nodeProvider.services.signInitialTransaction(txBuilder)
+
+        val ftx = ptx.buildFilteredTransaction(Predicate {
+            when (it) {
+                is Command<*> -> nodeOracle.legalIdentity().owningKey in it.signers && it.value is HARStateContract.CheckAuth
+                else -> false
+            }
+        })
+        val flow = SignFilteredTransaction(nodeOracle.legalIdentity(), ftx)
+        val future = nodePayer.startFlow(flow)
+        mockNet.runNetwork()
+        val oracleSignature = future.get();
+
+        val oracleKey = nodeOracle.legalIdentity().owningKey
+        val oracleSign = nodeOracle.services.createSignature(ptx, oracleKey)
+        assert (oracleSignature == oracleSign)
+    }
 }
