@@ -49,8 +49,6 @@ object ProposalFlow {
         @Suspendable
         override fun call() {
             val request = session.receive<SignedTransaction>().unwrap { it }
-
-
             val key = this.serviceHub.myInfo.legalIdentities.first().owningKey
             val sign = this.serviceHub.createSignature(request, key)
             val signed = request.withAdditionalSignature(sign)
