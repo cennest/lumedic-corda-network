@@ -4,6 +4,7 @@
 <img src="http://lumedictc.westus.cloudapp.azure.com/app/rest/builds/buildType:(id:LumedicCordaNetwork_Build)/statusIcon"/>
 </a>
 
+
 # CorDapp Template
 
 Welcome to the CorDapp template. The CorDapp template is a stubbed-out CorDapp 
