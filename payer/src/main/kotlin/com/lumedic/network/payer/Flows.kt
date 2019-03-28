@@ -44,6 +44,8 @@ object ProposalFlow {
 
     @InitiatedBy(GetSignedTransaction::class)
     class Acceptor(val session: FlowSession) :FlowLogic<Unit>() {
+
+
         @Suspendable
         override fun call() {
 
