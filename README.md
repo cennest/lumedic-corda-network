@@ -1,5 +1,10 @@
 ![Corda](https://www.corda.net/wp-content/uploads/2016/11/fg005_corda_b.png)
 
+<a href="http://lumedictc.westus.cloudapp.azure.com/viewType.html?buildTypeId=LumedicCordaNetwork_Build&guest=1">
+<img src="http://lumedictc.westus.cloudapp.azure.com/app/rest/builds/buildType:(id:LumedicCordaNetwork_Build)/statusIcon"/>
+</a>
+
+
 # CorDapp Template
 
 Welcome to the CorDapp template. The CorDapp template is a stubbed-out CorDapp 
