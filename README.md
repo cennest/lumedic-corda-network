@@ -10,7 +10,7 @@ which you can use to bootstrap your own CorDapp projects.
 
 ## Pre-Requisites
 
-You will need the following installed on your machine before you can start:
+You will   need the following installed on your machine before you can start:
 
 * [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
   installed and available on your path (Minimum version: 1.8_131).
