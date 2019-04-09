@@ -7,6 +7,7 @@
 
 # CorDapp Template
 
+
 Welcome to the CorDapp template. The CorDapp template is a stubbed-out CorDapp 
 which you can use to bootstrap your own CorDapp projects.
 
