@@ -1,5 +1,9 @@
 .gradle
-.idea
+
+!.idea/
+.idea/*
+!.idea/inspectionProfiles/
+
 gradle
 *.iml
 elm-stuff/
